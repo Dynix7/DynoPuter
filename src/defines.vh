@@ -1,6 +1,7 @@
 `ifndef DEFINES_VH
 `define DEFINES_VH
 
+localparam WORD_WIDTH 16;
 localparam INSTRUCT_WIDTH = 16;
 
 localparam OPCODE_MSB = 15;
