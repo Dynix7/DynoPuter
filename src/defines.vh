@@ -1,5 +1,5 @@
-'inndef DEFINES_VH
-'define DEFINES_VH
+`inndef DEFINES_VH
+`define DEFINES_VH
 
 // Main Opcodes
 //alu operatations
@@ -24,7 +24,7 @@ localparam OP_AND = 4'hB;
 localparam OP_OR = 4'hC;
 localparam OP_NOT = 4'hD;
 
-localparam OP_SPEC = 4'hE; //basically unused for now 
+localparam OP_SPECIAL = 4'hE; //basically unused for now 
 
 localparam OP_EXT = 4'hF;
 //Extended op codes
@@ -36,4 +36,4 @@ localparam SUB_OP_MOV = 4'h4;
 localparam SUB_OP_CMP = 4'h5;
 
 
-'endif
+`endif
