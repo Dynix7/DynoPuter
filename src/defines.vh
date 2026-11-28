@@ -1,6 +1,20 @@
 `inndef DEFINES_VH
 `define DEFINES_VH
 
+localparam INSTRUCT_WIDTH = 16;
+
+localparam OPCODE_MSB = 15;
+localparam OPCODE_LSB = 12;
+
+localparam RA_MSB = 11;
+localparam RA_LSB = 8;
+
+localparam RB_MSB = 7;
+localparam RB_LSB = 4;
+
+localparam RC_MSB = 3;
+localparam RC_LSB = 0;
+
 // Main Opcodes
 //alu operatations
 localparam OP_NOP = 4'h0;
@@ -24,7 +38,7 @@ localparam OP_AND = 4'hB;
 localparam OP_OR = 4'hC;
 localparam OP_NOT = 4'hD;
 
-localparam OP_SPECIAL = 4'hE; //basically unused for now 
+localparam OP_SPECIAL_HALT = 4'hE; //basically halt for now, might reassign later
 
 localparam OP_EXT = 4'hF;
 //Extended op codes
