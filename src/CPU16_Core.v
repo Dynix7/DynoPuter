@@ -41,4 +41,7 @@ reg [WORD_WIDTH-1:0] instr; // instruction finally
 reg [WORD_WIDTH-1:0] register;
 reg [WORD_WIDTH-1:0] sp; //stack pointer
 
+//Decoding the instruction
+wire [3:0] opcode = instr[OPCODE_MSB:OPCODE_MSB]; //opcode mentioned
+
 endmodule
