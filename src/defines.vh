@@ -18,6 +18,16 @@ localparam OP_JMP = 4'h7;
 localparam OP_JZ = 4'h8;
 localparam OP_JNZ = 4'h9;
 
+//bitwise operations
+localparam OP_XOR = 4'hA;
+localparam OP_AND = 4'hB;
+localparam OP_OR = 4'hC;
+localparam OP_NOT = 4'hD;
+
+localparam OP_SPEC = 4'hE; //basically unused for now 
+
+//Extended op codes
+localparam OP_EXT = 4'hF;
 
 
 'endif
