@@ -26,8 +26,14 @@ localparam OP_NOT = 4'hD;
 
 localparam OP_SPEC = 4'hE; //basically unused for now 
 
-//Extended op codes
 localparam OP_EXT = 4'hF;
+//Extended op codes
+localparam SUB_OP_PUSH = 4'h0;
+localparam SUB_OP_POP = 4'h1;
+localparam SUB_OP_SHL = 4'h2;
+localparam SUB_OP_SHR = 4'h3;
+localparam SUB_OP_MOV = 4'h4;
+localparam SUB_OP_CMP = 4'h5;
 
 
 'endif
