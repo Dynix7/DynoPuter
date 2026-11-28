@@ -11,7 +11,7 @@ module CPU16_Core(
     output reg [WORD_WIDTH-1:0] mem_addr, // the target address
 
     output reg [WORD_WIDTH-1:0] mem_wdata, //data to write
-    input reg [WORD_WIDTH-1:0] mem_rdata, //data to read
+    input wire [WORD_WIDTH-1:0] mem_rdata, //data to read
 
     input wire mem_ready, // asserted when memory operation is done
 
@@ -22,6 +22,17 @@ module CPU16_Core(
     output reg [WORD_WIDTH-1:0] pc
 );
 
+integer i; // for loops and stuff
 
+//state machine for cpu, mostly memory slop
+localparam [2:0]
+    STATE_FETCH_REQ = 3'd0,
+    STATE_FETCH_WAIT = 3'd1,
+    STATE_EXEC = 3'd2,
+    STATE_MEM_REQ = 3'd3,
+    STATE_MEM_WAIT = 3'd4,
+    STATE_HALT = 3'd5;
+
+reg [2:0] state;
 
 endmodule
