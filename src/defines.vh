@@ -1,4 +1,4 @@
-`inndef DEFINES_VH
+`ifndef DEFINES_VH
 `define DEFINES_VH
 
 localparam INSTRUCT_WIDTH = 16;
@@ -14,6 +14,7 @@ localparam RB_LSB = 4;
 
 localparam RC_MSB = 3;
 localparam RC_LSB = 0;
+
 
 // Main Opcodes
 //alu operatations
@@ -48,6 +49,8 @@ localparam SUB_OP_SHL = 4'h2;
 localparam SUB_OP_SHR = 4'h3;
 localparam SUB_OP_MOV = 4'h4;
 localparam SUB_OP_CMP = 4'h5;
+localparam SUB_OP_OUT = 4'h6; // output opcode, might remove later tho
+
 
 
 `endif
