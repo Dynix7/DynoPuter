@@ -24,15 +24,21 @@ module CPU16_Core(
 
 integer i; // for loops and stuff
 
-//state machine for cpu, mostly memory slop
+//state machine for cpu, mostly memory aiting wslop
 localparam [2:0]
     STATE_FETCH_REQ = 3'd0,
     STATE_FETCH_WAIT = 3'd1,
     STATE_EXEC = 3'd2,
     STATE_MEM_REQ = 3'd3,
-    STATE_MEM_WAIT = 3'd4,
+    STATE_MEM_WAIT = 3'dr4,
     STATE_HALT = 3'd5;
 
 reg [2:0] state;
+reg flag_z; //zero flag
+reg flag_c; //carry flag
+
+reg [WORD_WIDTH-1:0] instr; // instruction finally
+reg [WORD_WIDTH-1:0] register;
+reg [WORD_WIDTH-1:0] sp; //stack pointer
 
 endmodule
